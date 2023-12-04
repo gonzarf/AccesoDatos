@@ -1,0 +1,21 @@
+.persona {
+    display: inline-block;
+    border: 1px black solid;
+    padding: 10px;
+}
+
+.persona > * {
+    margin: 10px;
+}
+
+img {
+    width: 100px;
+}
+
+.avatar, .eliminar {
+    text-align: center;
+}
+
+.resaltar {
+    font-weight: bold;
+}
