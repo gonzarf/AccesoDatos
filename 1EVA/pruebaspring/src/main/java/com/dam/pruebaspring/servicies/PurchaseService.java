@@ -22,4 +22,13 @@ public class PurchaseService {
         return purchaseRepository.findById(id).get();
     }
 
+    public Purchase savePurchase(Purchase purchase){ return purchaseRepository.save(purchase);}
+
+    public Purchase updatePurchase(Purchase purchase){ return purchaseRepository.save(purchase);}
+
+    public Boolean deletePurchase(Integer id){
+        purchaseRepository.deleteById(id);
+        return !purchaseRepository.findById(id).isPresent();
+    }
+
 }
