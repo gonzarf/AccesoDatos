@@ -24,6 +24,10 @@ public class PurchaseController {
         return purchaseService.getPurchasesById(id);
     }
 
+    @GetMapping("by-name/{busqueda}")
+    public List<Purchase> getAllPurchasesById(@PathVariable String busqueda){
+        return purchaseService.getPurchasesByName(busqueda);
+    }
     @PostMapping("save")
     public Purchase savePurchase(@RequestBody Purchase purchase){ return purchaseService.savePurchase(purchase);}
 
